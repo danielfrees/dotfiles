@@ -8,6 +8,9 @@ Repository tracked in $HOME/.cfg/. Worktree is simply $HOME.
 
 Setting up these dotfiles in a new system:
 
+1. Install iTerm2
+2. Install oh my zsh
+
 ```shell
 echo ".cfg" >> .gitignore #cfg shouldn't track itself
 git clone --bare git@github.com:danielfrees/dotfiles.git $HOME/.cfg  #--bare is fine if desired, change url if not using ssh
