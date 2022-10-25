@@ -1,0 +1,9 @@
+
+#Set up 'config' command for managing dotfiles. 
+#config works like git but with altered repo, worktree
+#$HOME/.cfg/ is the repo, and the worktree is $HOME
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+#basic aliases
+alias python=python3
+alias pip=pip3

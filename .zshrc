@@ -1,11 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-#Set up 'config' command for managing dotfiles. 
-#config works like git but with altered repo, worktree
-#$HOME/.cfg/ is the repo, and the worktree is $HOME
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
 #add conda to path
 export PATH=~/opt/anaconda3/bin/:$PATH
 
@@ -94,26 +89,14 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR="nano"
+else
+  export EDITOR="code -w"
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias python=python3
-alias pip=pip3
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -129,3 +112,15 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+source $HOME/.aliases
