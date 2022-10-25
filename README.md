@@ -8,7 +8,7 @@ Repository tracked in $HOME/.cfg/. Worktree is simply $HOME.
 
 Setting up these dotfiles in a new system:
 
-```
+```shell
 echo ".cfg" >> .gitignore #cfg shouldn't track itself
 git clone git@github.com:danielfrees/dotfiles.git $HOME/.cfg  #--bare is fine if desired, change url if not using ssh
 alias config='/usr/bin/git --git-dir=$HOME/.cfg./ --work-tree=$HOME'  #this will auto apply in the future once .zshrc is synced
