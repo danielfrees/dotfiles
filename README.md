@@ -19,3 +19,13 @@ config config --local status.showUntrackedFiles no  #DONT TRACK YOUR ENTIRE FILE
 config checkout   #If you get errors, backup and delete conflicting file names as necessary until no errors
 config submodule update #to update the .oh-my-zsh/ submodule
 ```
+
+3. Add oh my zsh plugins
+
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+4. Edit terminal profile to always source ~/.zshrc on startup.
